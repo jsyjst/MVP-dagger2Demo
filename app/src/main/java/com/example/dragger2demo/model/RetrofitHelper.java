@@ -1,36 +1,33 @@
 package com.example.dragger2demo.model;
 
-import com.example.dragger2demo.ConstantApi;
+import com.example.dragger2demo.model.api.SingerImgApi;
+import com.example.dragger2demo.model.entiy.SingerImg;
 
-import okhttp3.OkHttpClient;
+import javax.inject.Inject;
+
+import io.reactivex.Observable;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * <pre>
  *     author : 残渊
- *     time   : 2018/12/14
- *     desc   : Retrofit的实体类
+ *     time   : 2018/12/16
+ *     desc   :
  * </pre>
  */
 
 
-public class RetrofitHelper {
-    private static Retrofit retrofit = null;
+public class RetrofitHelper implements HttpHelper {
 
-    public static Retrofit getInstance(){
-        if(retrofit == null){
-            GsonConverterFactory gsonConverterFactory = GsonConverterFactory.create();
-            OkHttpClient okHttpClient = new OkHttpClient();
-            OkHttpClient.Builder builder = okHttpClient.newBuilder();
-            builder.retryOnConnectionFailure(true);
-            retrofit = new Retrofit.Builder().client(okHttpClient)
-                    .baseUrl(ConstantApi.BASE_URL)
-                    .addConverterFactory(gsonConverterFactory)
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .build();
-        }
-        return  retrofit;
+    private SingerImgApi mSingerImgApi;
+
+    @Inject
+    public RetrofitHelper(SingerImgApi singerImgApi){
+        mSingerImgApi = singerImgApi;
+
+    }
+    @Override
+    public Observable<SingerImg> getSingerImg(String singer) {
+        return mSingerImgApi.getSingerImg(singer);
     }
 }
