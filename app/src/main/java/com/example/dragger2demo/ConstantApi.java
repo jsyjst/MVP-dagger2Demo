@@ -10,5 +10,5 @@ package com.example.dragger2demo;
 
 
 public class ConstantApi {
-    public static final String BASE_URL="http://music.163.com/api/search/get";
+    public static final String BASE_URL="http://music.163.com/api/search/get/";
 }

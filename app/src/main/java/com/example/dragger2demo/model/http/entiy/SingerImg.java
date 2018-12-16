@@ -1,4 +1,4 @@
-package com.example.dragger2demo.model.entiy;
+package com.example.dragger2demo.model.http.entiy;
 
 import java.util.List;
 

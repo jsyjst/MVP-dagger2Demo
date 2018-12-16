@@ -1,6 +1,4 @@
-package com.example.dragger2demo.model.entiy;
-
-import android.content.Context;
+package com.example.dragger2demo.model.http.entiy;
 
 import java.io.Serializable;
 

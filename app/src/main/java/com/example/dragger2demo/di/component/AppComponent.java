@@ -2,6 +2,7 @@ package com.example.dragger2demo.di.component;
 
 import com.example.dragger2demo.configure.App;
 import com.example.dragger2demo.di.module.AppModule;
+import com.example.dragger2demo.model.DataModel;
 
 import javax.inject.Singleton;
 
@@ -24,4 +25,5 @@ public interface AppComponent {
 
     App getApp();
     Retrofit getRetrofit();
+    DataModel getDataModel();
 }

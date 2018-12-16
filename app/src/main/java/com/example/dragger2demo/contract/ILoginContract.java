@@ -2,7 +2,8 @@ package com.example.dragger2demo.contract;
 
 import android.content.Context;
 
-import com.example.dragger2demo.model.entiy.User;
+import com.example.dragger2demo.base.BaseView;
+import com.example.dragger2demo.model.http.entiy.User;
 
 /**
  * <pre>
@@ -14,10 +15,10 @@ import com.example.dragger2demo.model.entiy.User;
 
 
 public interface ILoginContract {
-    interface IView{
-        Context getContext();
+    interface IView extends BaseView{
+        void showImgPic(String pic);
     }
     interface IPresenter{
-        void login(User user);
+        void getSingerImg(String singer);
     }
 }

@@ -1,12 +1,11 @@
-package com.example.dragger2demo.model;
+package com.example.dragger2demo.model.http;
 
-import com.example.dragger2demo.model.api.SingerImgApi;
-import com.example.dragger2demo.model.entiy.SingerImg;
+import com.example.dragger2demo.model.http.api.SingerImgApi;
+import com.example.dragger2demo.model.http.entiy.SingerImg;
 
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
-import retrofit2.Retrofit;
 
 /**
  * <pre>

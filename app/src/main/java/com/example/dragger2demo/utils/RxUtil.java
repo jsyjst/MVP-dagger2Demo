@@ -1,6 +1,6 @@
 package com.example.dragger2demo.utils;
 
-import com.example.dragger2demo.model.entiy.SingerImg;
+import com.example.dragger2demo.model.http.entiy.SingerImg;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

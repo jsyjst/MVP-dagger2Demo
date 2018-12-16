@@ -1,10 +1,8 @@
 package com.example.dragger2demo.di.module;
 
-import android.app.Application;
-
 import com.example.dragger2demo.ConstantApi;
 import com.example.dragger2demo.configure.App;
-import com.example.dragger2demo.model.api.SingerImgApi;
+import com.example.dragger2demo.model.http.api.SingerImgApi;
 
 import java.util.concurrent.TimeUnit;
 
@@ -40,12 +38,12 @@ public class AppModule {
 
     @Provides
     @Singleton
-    OkHttpClient.Builder providesOkhttpClientBuilder(){
+    OkHttpClient.Builder providesOkHttpClientBuilder(){
         return new OkHttpClient.Builder();
     }
     @Provides
     @Singleton
-    OkHttpClient providesOkhttpClient(OkHttpClient.Builder builder){
+    OkHttpClient providesOkHttpClient(OkHttpClient.Builder builder){
         builder.connectTimeout(20, TimeUnit.SECONDS);
         return builder.build();
     }
